@@ -1,4 +1,4 @@
-name: alpinedockerloginDEVQA
+name: hdockerloginDEVQA
 
 # Controls when the workflow will run
 on:
@@ -19,9 +19,9 @@ jobs:
        username: ${{secrets.DOCKERHUBUSERNAME}}
        password: ${{secrets.DOCKERHUBPASSWORD}}
     - name: Docker Pull
-      run: docker pull ubuntu
+      run: docker pull hello-world
     - name: Docker Tag
-      run: docker tag ubuntu raamu8/alpine
+      run: docker tag hello-world raamu8/alpine
     - name: Docker Push
       run: docker push raamu8/alpine
   LogintodockerhubQA:
