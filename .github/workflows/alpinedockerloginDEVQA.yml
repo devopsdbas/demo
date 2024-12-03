@@ -19,9 +19,9 @@ jobs:
        username: ${{secrets.DOCKERHUBUSERNAME}}
        password: ${{secrets.DOCKERHUBPASSWORD}}
     - name: Docker Pull
-      run: docker pull alpine
+      run: docker pull ubuntu
     - name: Docker Tag
-      run: docker tag alpine raamu8/alpine
+      run: docker tag ubuntu raamu8/alpine
     - name: Docker Push
       run: docker push raamu8/alpine
   LogintodockerhubQA:
