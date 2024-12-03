@@ -19,7 +19,7 @@ jobs:
        username: ${{secrets.DOCKERHUBUSERNAME}}
        password: ${{secrets.DOCKERHUBPASSWORD}}
     - name: Docker Pull
-      run: docker pull hello-world
+      run: docker pull alpine
     - name: Docker Tag
       run: docker tag alpine raamu8/alpine
     - name: Docker Push
